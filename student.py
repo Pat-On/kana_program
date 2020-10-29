@@ -1,4 +1,3 @@
-
 class Student:
     """
     This class is going to collect information about progress done by student
@@ -6,6 +5,7 @@ class Student:
 
 
     """
+
     def __init__(self, ):
         self.statistic = dict
         self.answer = str
