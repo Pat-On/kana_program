@@ -27,8 +27,10 @@ class MaterialGenerator:
         :key chosen_katakana: boolean
         :return self.chosen: dictionary
         """
-        # Future modification: add possibility to chose two dictionaries at the same time
-        if chosen_hiragana is not False:
+        if (chosen_hiragana is not False) and (chosen_katakana is not False):
+            # self.chosen = dict(self.hiragana.update(self.katakana))
+            self.chosen = {**self.hiragana, **self.katakana}
+        elif chosen_hiragana is not False:
             self.chosen = self.hiragana
         elif chosen_katakana is not False:
             self.chosen = self.katakana
