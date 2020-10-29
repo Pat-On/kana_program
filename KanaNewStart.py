@@ -17,11 +17,6 @@ katakana_dictionary = dict(ア="A", イ="I", ウ="U", エ="E", オ="O", カ="KA"
                            ロ="RO", ワ="WA", ヰ="WI", ヱ="WE", ヲ="WO", ン="N", ヴ="VU", ヷ="VA", ヸ="VI", ヹ="VE", ヺ="VO")
 
 
-class Student:
-    def __init__(self, ):
-        pass
-
-
 class MaterialGenerator:
     """
     This class is responsible for generating sets of 10 randomly chosen symbols from hiragana or katakana.
@@ -37,7 +32,7 @@ class MaterialGenerator:
         self.chosen_katakana = False
         # self.chosen = self.chosen # Why it don't work with it?
 
-    def _hiragana_or_katakana(self, chosen_hiragana=False, chosen_katakana=False):
+    def hiragana_or_katakana(self, chosen_hiragana=False, chosen_katakana=False):
         """
         This function is going to choose dictionary - base on decision of player
         :key chosen_hiragana: boolean
@@ -52,7 +47,7 @@ class MaterialGenerator:
 
         return self.chosen
 
-    def _generator_10_symbols(self, dict_param):
+    def generator_10_symbols(self, dict_param):
         """
         This function is going to take 10 chosen symbols from passed through dictionary
         :key dict_param: dictionary
@@ -67,20 +62,66 @@ class MaterialGenerator:
 
         return self.words_to_study
 
-    def _generator_3_neg_answers(self):
+    def generator_3_neg_answers(self):
         """ I have to think it over if I'm going to need it at all, because I'm going to use dictionaries {key:value}
 
         I'm going to leave it now, later I will decide what to do with that.
+
+        >>> Better option in my opinion is it to put it in "StudySession" class
         """
         pass
 
+    def cleaning_words_to_study(self):
+        """
+        This Method is going to clean only the words_to_study (dictionary)
+        :key nothing
+        :return nothing
+        """
+
+
+        self.words_to_study = {}
+
 
 class StudySession:
+    """
+    It is going to be main "loop" for entire program. It is going to have method which is going to initialize entire
+    study session, and by this it is going to keep doing and taking input and sending output to other classes
+
+    """
     def __init__(self):
+
+    def answer_checker(self):
         pass
 
+    def student_ques(self):
+        pass
 
-class MenuCMD():
+    def passing_answer(self):
+        pass
+
+    def update_statistic_result(self):
+        pass
+
+    def end_study_session(self):
+        pass
+
+class Student:
+    """
+    This class is going to collect information about progress done by student
+    statistic: negative / positive answer
+
+
+    """
+    def __init__(self, ):
+        pass
+
+    
+
+class MenuCMD:
+    """
+    Here are stored all print functions needed to not GUI version of application
+
+    """
     def __init__(self):
         pass
 
@@ -92,9 +133,9 @@ class MenuCMD():
 
 chosen1 = MaterialGenerator()
 
-full_chosen_dictionary = MaterialGenerator()._hiragana_or_katakana(chosen_hiragana=False, chosen_katakana=True)
+full_chosen_dictionary = MaterialGenerator().hiragana_or_katakana(chosen_hiragana=False, chosen_katakana=True)
 
-ten_chosen_symbols = MaterialGenerator()._generator_10_symbols(dict_param=full_chosen_dictionary)
+ten_chosen_symbols = MaterialGenerator().generator_10_symbols(dict_param=full_chosen_dictionary)
 
 print(full_chosen_dictionary)
 print(ten_chosen_symbols)
