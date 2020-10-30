@@ -1,3 +1,6 @@
+import material_generator
+import student
+
 class StudySession:
     """
     It is going to be main "loop" for entire program. It is going to have method which is going to initialize entire

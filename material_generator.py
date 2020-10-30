@@ -12,7 +12,7 @@ class MaterialGenerator:
         self.hiragana = hiragana_katakana_dictionaries.hiragana_dictionary
         self.words_to_study = {}
         # self.answers_to_studies_words = []  # It may be not necessary if im going to use dictionaries
-        # self.neg_answers = []
+        self.neg_answers = []
         self.chosen_hiragana = False  # do I really need it?
         self.chosen_katakana = False
         # self.chosen = self.chosen # Why it don't work with it?
@@ -52,14 +52,20 @@ class MaterialGenerator:
 
         return self.words_to_study
 
-    def generator_3_neg_answers(self):
-        """ I have to think it over if I'm going to need it at all, because I'm going to use dictionaries {key:value}
+    def generator_20_neg_answers(self, dict_param):
+        """ It is going to take choose 10 randomly chosen answers to use it in study_session as a 3 fake correct answers
 
+        I have to think it over if I'm going to need it at all, because I'm going to use dictionaries {key:value}
         I'm going to leave it now, later I will decide what to do with that.
-
         >>> Better option in my opinion is it to put it in "StudySession" class
         """
-        pass
+        self.dict_param = dict_param
+        for _ in range(20):
+            self.random_symbol = (random.choice(list(self.dict_param.keys())))
+            self.neg_answers.append(self.dict_param[self.random_symbol])
+            self.dict_param.pop(self.random_symbol)
+
+        return self.neg_answers
 
     def cleaning_words_to_study(self):
         """
@@ -69,3 +75,4 @@ class MaterialGenerator:
         """
 
         self.words_to_study = {}
+

@@ -6,9 +6,13 @@ class Student:
 
     """
 
-    def __init__(self, ):
+    def __init__(self, name="anonim" ):
         self.statistic = dict
         self.answer = str
+        self.name = name
 
-    def get_answer_from_student(self):
+    def set_answer_from_student(self):
         self.answer = input()
+
+    def get_students_answer(self):
+        return self.answer
