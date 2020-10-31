@@ -1,6 +1,6 @@
 import material_generator
 import study_session
-import student
+import student_student
 
 #######################################################################################################################
 #######################################################################################################################
@@ -17,10 +17,13 @@ full_chosen_dictionary = chosen1.hiragana_or_katakana(chosen_hiragana=True, chos
 ten_chosen_symbols = chosen1.generator_10_symbols(dict_param=full_chosen_dictionary)
 twenty_negative_answers_list = chosen1.generator_20_neg_answers(dict_param=full_chosen_dictionary)
 
-patryk = student.Student()
+
+
+patryk = student_student.Student()
 study = study_session.StudySession()
 
-study.answer_checker(ten_chosen_symbols)
+
+
 
 
 print(full_chosen_dictionary)

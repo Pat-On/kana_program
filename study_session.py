@@ -1,5 +1,5 @@
 import material_generator
-import student
+import student_student
 import random
 
 
@@ -39,7 +39,7 @@ class StudySession:
         while len(self.chosen_set) >= 0:
             self.random_symbol = (random.choice(list(self.chosen_set.keys())))
             print(self.random_symbol)
-            self.answer_of_student = student.set_answer_from_student()
+            self.answer_of_student = student_student.set_answer_from_student()
             while self.answer_of_student != self.random_symbol.keys():
                 if self.answer_of_student == self.random_symbol.keys():
                     print("Good answer!")

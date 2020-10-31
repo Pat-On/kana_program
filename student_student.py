@@ -14,5 +14,10 @@ class Student:
     def set_answer_from_student(self):
         self.answer = input()
 
+        return self.answer
+
     def get_students_answer(self):
         return self.answer
+
+    def test_module(self):
+        print("I'm here!")
