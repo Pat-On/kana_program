@@ -8,8 +8,12 @@ class MaterialGenerator:
     """
 
     def __init__(self):
-        self.katakana = hiragana_katakana_dictionaries.katakana_dictionary
-        self.hiragana = hiragana_katakana_dictionaries.hiragana_dictionary
+        # self.katakana = hiragana_katakana_dictionaries.katakana_dictionary
+        # self.hiragana = hiragana_katakana_dictionaries.hiragana_dictionary
+
+        # WE are going to play now with object and composition
+        self.obj_hiragana_katakana_dictionaries = hiragana_katakana_dictionaries.HiraganaKatakanaDictionaries()
+
         self.words_to_study = {}
         # self.answers_to_studies_words = []  # It may be not necessary if im going to use dictionaries
         self.neg_answers = []
@@ -29,11 +33,11 @@ class MaterialGenerator:
         """
         if (chosen_hiragana is not False) and (chosen_katakana is not False):
             # self.chosen = dict(self.hiragana.update(self.katakana))
-            self.chosen = {**self.hiragana, **self.katakana}
+            self.chosen = {**self.obj_hiragana_katakana_dictionaries.get_hiragana(), **self.obj_hiragana_katakana_dictionaries.get_katakana()}
         elif chosen_hiragana is not False:
-            self.chosen = self.hiragana
+            self.chosen = self.obj_hiragana_katakana_dictionaries.get_hiragana()
         elif chosen_katakana is not False:
-            self.chosen = self.katakana
+            self.chosen = self.obj_hiragana_katakana_dictionaries.get_katakana()
 
         return self.chosen
 
@@ -57,7 +61,7 @@ class MaterialGenerator:
 
         I have to think it over if I'm going to need it at all, because I'm going to use dictionaries {key:value}
         I'm going to leave it now, later I will decide what to do with that.
-        >>> Better option in my opinion is it to put it in "StudySession" class
+        Better option in my opinion is it to put it in "StudySession" class
         """
         self.dict_param = dict_param
         for _ in range(20):
@@ -75,4 +79,12 @@ class MaterialGenerator:
         """
 
         self.words_to_study = {}
+
+    def get_20_neg_answers(self):
+
+        return self.neg_answers
+
+    def get_10_generated_symbols(self):
+
+        return self.words_to_study
 

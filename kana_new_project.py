@@ -1,6 +1,6 @@
 import material_generator
 import study_session
-import student_student
+import student
 
 #######################################################################################################################
 #######################################################################################################################
@@ -19,7 +19,7 @@ twenty_negative_answers_list = chosen1.generator_20_neg_answers(dict_param=full_
 
 
 
-patryk = student_student.Student()
+patryk = student.Student()
 study = study_session.StudySession()
 
 
@@ -36,3 +36,8 @@ stat3 = type(twenty_negative_answers_list)
 print(f"Type of full_chosen_dictionary: {stat}")
 print(f"Type of ten_chosen_symbols: {stat2}")
 print(f"Type of ten_chosen_symbols: {stat3}")
+
+student2 = student.Student()
+
+student2.choosing_material_to_study()
+
