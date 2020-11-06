@@ -14,19 +14,37 @@ class StudySession:
         self.chosen_set = dict
         self.answer_of_student = str
         self.random_symbol = dict
+        self.symbols_needed_to_fake_answers = dict
+        self.obj_material_generator = material_generator.MaterialGenerator()
+        self.obj_student = student.Student()
 
-    def four_answer_gen(self):
+    def chosen_set_by_student(self):
+        """ Method is going to take chosen symbols and call material_generator to create necessary dictionary"""
+
+        self.chosen_set = self.obj_material_generator.hiragana_or_katakana(self.obj_student.choosing_material_to_study())
+        return self.chosen_set
+
+    def twenty_negative_answers(self):
+        """ this method is going to update 20 negative answer use with 1 correct in proposed answers"""
+
+        self.symbols_needed_to_fake_answers = self.obj_material_generator.generator_20_neg_answers()
+        return self.symbols_needed_to_fake_answers
+
+    def questions_for_student(self):
+        """ it is going through dict in random order and  print it to student. So we will have to mark
+        in __init__ proper answer to have access to it from different place in code - technical problem"""
+        pass
+
+    def three_incorrect_answers(self):
         """
+        this method is going to create 1 positive and 3 not correct proposition of answers, printed on the screen"
         I'm not sure if it is good place for it, or it is going to be better to put it into MaterialGenerator Class
         :return:
         """
+        # self.obj_material_generator.get_20_neg_answers()
+        # self.symbols_needed_to_fake_answers = self.obj_material_generator.get_20_neg_answers()
+        # return self.symbols_needed_to_fake_answers
         pass
-
-    # I'm quite sure, that is not good way to doing it
-    # def student_answer_receiver(self):
-    #     self.answer_of_student = student.get_students_answer()
-    #
-    #     return self.answer_of_student
 
     def answer_checker(self, dictionary):
         """
@@ -47,21 +65,16 @@ class StudySession:
                     print("Try one more time!")
             self.chosen_set.pop(self.random_symbol)
 
-
-    def answer_option_generator(self):
-        """ this method is going to create 1 positive and 3 not correct proposition of answers, printed on the screen"""
-        pass
-
-    # I'm not sure how I'm going to use the methods above
-
-    def student_ques(self):
-        pass
-
-    def passing_answer(self):
+    def end_study_session(self):
+        """ we can put it in check statement related to input from student"""
         pass
 
     def update_statistic_result(self):
+        """update statistick stored in student class? or we are going to do different solution?"""
         pass
 
-    def end_study_session(self):
-        pass
+    # I'm quite sure, that is not good way to doing it
+    # def student_answer_receiver(self):
+    #     self.answer_of_student = student.get_students_answer()
+    #
+    #     return self.answer_of_student

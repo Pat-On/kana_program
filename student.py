@@ -6,13 +6,17 @@ class Student:
 
     """
 
-    def __init__(self, name="anonim" ):
-        self.statistic = dict
+    def __init__(self,):
+        self.name = input("what is your name?")
         self.answer = str
-        self.name = name
         self.chosen_hiragana = False  # do I really need it?
         self.chosen_katakana = False
-        self.option = str
+
+        # self.statistic = dict
+        self.option = str  # from def choosing_material_to_study()
+
+    # We are starting to make this class more simple and to decide, what we have to change to work with
+    # the study_session class in association - it is no longer association - composition!
 
     def choosing_material_to_study(self):
         self.option = input("Choose option:")
@@ -32,13 +36,19 @@ class Student:
         else:
             print("Incorrect option. Try again")
             self.choosing_material_to_study()  # recursion. Is it going to work?
+        return self.chosen_hiragana, self.chosen_katakana
 
     def set_answer_from_student(self):
-        self.answer = input()
+        self.answer = input("Your guess: ")
+        #  is not better to put here return function or to create new def?
 
     def get_students_answer(self):
         return self.answer
 
-    @staticmethod
-    def test_module():
-        print("I'm here!")
+    # def update_statistic(self):
+    #     pass
+    #
+    # def get_statistic(self):
+    #     pass
+
+

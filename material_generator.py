@@ -8,18 +8,11 @@ class MaterialGenerator:
     """
 
     def __init__(self):
-        # self.katakana = hiragana_katakana_dictionaries.katakana_dictionary
-        # self.hiragana = hiragana_katakana_dictionaries.hiragana_dictionary
 
         # WE are going to play now with object and composition
-        self.obj_hiragana_katakana_dictionaries = hiragana_katakana_dictionaries.HiraganaKatakanaDictionaries()
-
-        self.words_to_study = {}
-        # self.answers_to_studies_words = []  # It may be not necessary if im going to use dictionaries
-        self.neg_answers = []
-        self.chosen_hiragana = False  # do I really need it?
-        self.chosen_katakana = False
-        # self.chosen = self.chosen # Why it don't work with it?
+        self.obj_hira_kata_dict = hiragana_katakana_dictionaries.HiraganaKatakanaDictionaries()
+        self.words_to_study = {}  # dict
+        self.neg_answers = []  # list
         self.dict_param = dict
         self.random_symbol = dict
         self.chosen = None
@@ -31,15 +24,20 @@ class MaterialGenerator:
         :key chosen_katakana: boolean
         :return self.chosen: dictionary
         """
+
         if (chosen_hiragana is not False) and (chosen_katakana is not False):
             # self.chosen = dict(self.hiragana.update(self.katakana))
-            self.chosen = {**self.obj_hiragana_katakana_dictionaries.get_hiragana(), **self.obj_hiragana_katakana_dictionaries.get_katakana()}
+            self.chosen = {**self.obj_hira_kata_dict.get_hiragana(), **self.obj_hira_kata_dict.get_katakana()}
         elif chosen_hiragana is not False:
-            self.chosen = self.obj_hiragana_katakana_dictionaries.get_hiragana()
+            self.chosen = self.obj_hira_kata_dict.get_hiragana()
         elif chosen_katakana is not False:
-            self.chosen = self.obj_hiragana_katakana_dictionaries.get_katakana()
+            self.chosen = self.obj_hira_kata_dict.get_katakana()
 
-        return self.chosen
+        # self.generator_10_symbols(self.chosen)
+        # print(type(self.chosen))
+        # print("hiragana or katakana")
+
+        return self.generator_10_symbols(self.chosen)
 
     def generator_10_symbols(self, dict_param):
         """
@@ -47,6 +45,7 @@ class MaterialGenerator:
         :key dict_param: dictionary
         :return words_to_study: dictionary
         """
+        print("generator_10_symbols")
         self.dict_param = dict_param
         # "_" python way of iteration through iterable
         for _ in range(10):
@@ -56,14 +55,14 @@ class MaterialGenerator:
 
         return self.words_to_study
 
-    def generator_20_neg_answers(self, dict_param):
-        """ It is going to take choose 10 randomly chosen answers to use it in study_session as a 3 fake correct answers
+    def generator_20_neg_answers(self):
+        """ It is going to take choose 20 randomly chosen answers to use it in study_session as a 3 fake correct answers
 
         I have to think it over if I'm going to need it at all, because I'm going to use dictionaries {key:value}
         I'm going to leave it now, later I will decide what to do with that.
         Better option in my opinion is it to put it in "StudySession" class
         """
-        self.dict_param = dict_param
+        self.dict_param = self.obj_hira_kata_dict.get_hiragana()
         for _ in range(20):
             self.random_symbol = (random.choice(list(self.dict_param.keys())))
             self.neg_answers.append(self.dict_param[self.random_symbol])
