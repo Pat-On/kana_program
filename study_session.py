@@ -48,7 +48,7 @@ class StudySession:
 
     def answer_checker(self, dictionary):
         """
-
+        Leave the if else statement and try to use dictionary as a hash value to check is the answer is true
         """
 
         self.chosen_set = dictionary  # I'm not sure if it is going to work at all

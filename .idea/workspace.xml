@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="683520f3-1494-432f-b48c-f6064c76ce6b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KhanaProject.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/KhanaProject.mdj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kana_new_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/kana_new_project.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/material_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/material_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student.py" beforeDir="false" afterPath="$PROJECT_DIR$/student.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hiragana_katakana_dictionaries.py" beforeDir="false" afterPath="$PROJECT_DIR$/hiragana_katakana_dictionaries.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study_session.py" beforeDir="false" afterPath="$PROJECT_DIR$/study_session.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +28,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
   </component>
-  <component name="RunManager" selected="Python.kana_new_project">
+  <component name="RunManager" selected="Python.material_generator">
     <configuration name="kana_new_project" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="kana_program" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -45,6 +42,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kana_new_project.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="material_generator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kana_program" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/material_generator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -97,6 +115,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.material_generator" />
         <item itemvalue="Python.kana_new_project" />
         <item itemvalue="Python.study_session" />
         <item itemvalue="Python.student" />
@@ -119,46 +138,55 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="586" y="198" key="#Inspections/1920.-378.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1604664066735" />
+    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1608072075380">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608072075380" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1604664009501">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/1920.-378.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1604664009501" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604264882328">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1608071291236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604264882328" />
-    <state width="1877" height="256" key="GridCell.Tab.0.bottom" timestamp="1604692394646">
+    <state x="740" y="275" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608071291236" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605304072476" />
+    <state width="1877" height="256" key="GridCell.Tab.0.bottom" timestamp="1607552096476">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="171" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1604600687843" />
     <state width="1877" height="171" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604607358110" />
     <state width="1877" height="171" key="GridCell.Tab.0.bottom/1920.-378.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1604665261058" />
     <state width="1877" height="171" key="GridCell.Tab.0.bottom/1920.-378.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604679817163" />
-    <state width="1877" height="256" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604692394646" />
-    <state width="1877" height="256" key="GridCell.Tab.0.center" timestamp="1604692394646">
+    <state width="1877" height="256" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1607552096476" />
+    <state width="1877" height="256" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604695124016" />
+    <state width="1877" height="256" key="GridCell.Tab.0.center" timestamp="1607552096476">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="171" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1604600687843" />
     <state width="1877" height="171" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604607358110" />
     <state width="1877" height="171" key="GridCell.Tab.0.center/1920.-378.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1604665261058" />
     <state width="1877" height="171" key="GridCell.Tab.0.center/1920.-378.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604679817162" />
-    <state width="1877" height="256" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604692394646" />
-    <state width="1877" height="256" key="GridCell.Tab.0.left" timestamp="1604692394646">
+    <state width="1877" height="256" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1607552096476" />
+    <state width="1877" height="256" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604695124016" />
+    <state width="1877" height="256" key="GridCell.Tab.0.left" timestamp="1607552096475">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="171" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1604600687842" />
     <state width="1877" height="171" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604607358109" />
     <state width="1877" height="171" key="GridCell.Tab.0.left/1920.-378.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1604665261058" />
     <state width="1877" height="171" key="GridCell.Tab.0.left/1920.-378.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604679817162" />
-    <state width="1877" height="256" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604692394646" />
-    <state width="1877" height="256" key="GridCell.Tab.0.right" timestamp="1604692394646">
+    <state width="1877" height="256" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1607552096475" />
+    <state width="1877" height="256" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604695124015" />
+    <state width="1877" height="256" key="GridCell.Tab.0.right" timestamp="1607552096476">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="171" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1604600687843" />
     <state width="1877" height="171" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604607358110" />
     <state width="1877" height="171" key="GridCell.Tab.0.right/1920.-378.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1604665261058" />
     <state width="1877" height="171" key="GridCell.Tab.0.right/1920.-378.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604679817162" />
-    <state width="1877" height="256" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604692394646" />
+    <state width="1877" height="256" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1607552096476" />
+    <state width="1877" height="256" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604695124016" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1604683058457">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -175,6 +203,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604683058457" />
+    <state x="625" y="224" width="702" height="591" key="NewModule_or_Project.wizard" timestamp="1605094916694">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="625" y="224" width="702" height="591" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1605094916694" />
     <state x="1913" y="366" width="1934" height="357" key="dock-window-1" timestamp="1604692708809">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -188,5 +220,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604680564066" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/material_generator.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/material_generator.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
